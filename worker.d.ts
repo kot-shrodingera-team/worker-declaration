@@ -1,3 +1,11 @@
+interface GermesApi {
+  DomEventsHelper: {
+    KeyPress: (charCode: number) => void;
+    KeyDown: (charCode: number) => void;
+    KeyUp: (charCode: number) => void;
+  };
+}
+
 interface GermesWorkerHelper {
   /**
    * Вывод сообщения в боковой лог конторы
@@ -298,6 +306,7 @@ interface GermesWorker {
 
 declare global {
   const worker: GermesWorker;
+  const Api: GermesApi;
 }
 
 export {};
