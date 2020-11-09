@@ -34,7 +34,7 @@ interface GermesWorkerHelper {
 
 interface GermesWorker {
   Api: {
-    Request: {
+    Rqst: {
       /**
        * Подписка на ответы с указанного url,
        * после этого, при появлении ответа на какой-либо HTTP-запрос с данным url,
@@ -48,6 +48,10 @@ interface GermesWorker {
       ClearAllRequestResponseSubscribes: () => void;
     };
   };
+  /**
+   * Флаг режима разработки
+   */
+  Dev: boolean;
   /**
    * Установка колбеков, которые бот будет вызывать
    * @param consoleLog Метод логгирования, непонятно на что влияет
