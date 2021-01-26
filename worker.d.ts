@@ -305,6 +305,10 @@ interface GermesWorker {
      * Параметр ставки (для фор, тоталов и тд)
      */
     Parametr: number;
+    /**
+     * Параметры воркера для этой БК (в JSON формате)
+     */
+    WorkerParameters: string;
   };
 }
 
