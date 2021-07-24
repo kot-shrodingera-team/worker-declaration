@@ -4,6 +4,19 @@ interface GermesApi {
     KeyDown: (charCode: number) => void;
     KeyUp: (charCode: number) => void;
   };
+  Rqst: {
+    /**
+     * Подписка на ответы с указанного url,
+     * после этого, при появлении ответа на какой-либо HTTP-запрос с данным url,
+     * будет выполнено window.request.onResponse(url, data, method, fullUrl)
+     * @param url
+     */
+    AddRequestResponseHandler: (url: string) => boolean;
+    /**
+     * Очиста подписки на все url
+     */
+    ClearAllRequestResponseSubscribes: () => void;
+  };
 }
 
 interface GermesWorkerHelper {
@@ -33,21 +46,7 @@ interface GermesWorkerHelper {
 }
 
 interface GermesWorker {
-  Api: {
-    Rqst: {
-      /**
-       * Подписка на ответы с указанного url,
-       * после этого, при появлении ответа на какой-либо HTTP-запрос с данным url,
-       * будет выполнено window.request.onResponse(url, data, method, fullUrl)
-       * @param url
-       */
-      AddRequestResponseHandler: (url: string) => boolean;
-      /**
-       * Очиста подписки на все url
-       */
-      ClearAllRequestResponseSubscribes: () => void;
-    };
-  };
+  Api: GermesApi;
   /**
    * Флаг режима разработки
    */
@@ -314,7 +313,6 @@ interface GermesWorker {
 
 declare global {
   const worker: GermesWorker;
-  const Api: GermesApi;
 }
 
 export {};
