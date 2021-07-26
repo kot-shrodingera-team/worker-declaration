@@ -309,6 +309,10 @@ interface GermesWorker {
    * Параметры воркера для этой БК (в JSON формате)
    */
   WorkerParameters: string;
+  /**
+   * RuCaptcha Api ключ
+   */
+  RuCaptchaApiKey: string;
 }
 
 declare global {
