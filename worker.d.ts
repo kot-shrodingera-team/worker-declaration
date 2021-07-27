@@ -313,6 +313,14 @@ interface GermesWorker {
    * RuCaptcha Api ключ
    */
   RuCaptchaApiKey: string;
+  /**
+   * Функция обновления максимальной ставки в ручнике
+   */
+  JSMaxChange: (newMax: number) => unknown;
+  /**
+   * Функция обновления коэффициента в ручнике
+   */
+  JSCoefChange: (newCoef: number) => unknown;
 }
 
 declare global {
