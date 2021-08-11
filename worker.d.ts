@@ -321,6 +321,14 @@ interface GermesWorker {
    * Функция обновления коэффициента в ручнике
    */
   JSCoefChange: (newCoef: number) => unknown;
+  /**
+   * Функция обновления параметра ставки в ручнике
+   */
+  JSParameterChange: (newCoef: number) => unknown;
+  /**
+   * Функция обновления доступности ставки в ручнике
+   */
+  JSEnabledChange: (newCoef: number) => unknown;
 }
 
 declare global {
