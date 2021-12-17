@@ -308,7 +308,7 @@ interface GermesWorker {
   /**
    * Параметры воркера для этой БК (в JSON формате)
    */
-  WorkerParameters: string;
+  BookmakerAdditionalOptions: string;
   /**
    * RuCaptcha Api ключ
    */
