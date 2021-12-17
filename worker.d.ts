@@ -306,6 +306,10 @@ interface GermesWorker {
     Parametr: number;
   };
   /**
+   * Старые параметры воркера для этой БК (в JSON формате)
+   */
+  WorkerParameters: string;
+  /**
    * Параметры воркера для этой БК (в JSON формате)
    */
   BookmakerAdditionalOptions: string;
